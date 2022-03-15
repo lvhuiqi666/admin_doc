@@ -646,6 +646,7 @@
             "shipName": "QDF-0019",  // 船的名称
             "user": "仰望星空",  // 任务人员
             "sLatitude": "31.3169841432"  // 起点纬度
+            "shipStreamAddress": "https://open.ys7.com/v3/openlive/F10240821_1_1.m3u8?expire=1665537079&id=369774369014853632&t=7f75a52a8c9bbb33ced65da0d52df783c55177b30a2c1f7787fb40f86709f92c&ev=100"  // 船舶的视频流地址
         },
         "endData": { // 结束巡河
             "shipNumber": "0019",  // 船编码
