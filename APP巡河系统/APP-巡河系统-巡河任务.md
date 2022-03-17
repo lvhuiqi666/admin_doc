@@ -803,14 +803,14 @@
 ```bash
 {
     "data": [
-        {
-            "waters_id": 23, // 水域ID
-            "waters__name": "平江河(初段)"  // 水域名称
+         {
+            "id": 14,
+            "name": "莫愁湖"
         },
         {
-            "waters_id": 22,
-            "waters__name": "后塘河"
-        }
+            "id": 15,
+            "name": "中塘河"
+        },
     ],
     "retCode": 0,
     "retMsg": "成功 | Success"
@@ -848,6 +848,40 @@
             "id": 15,
             "name": "QDF-0001",
             "number": "0001"
+        }
+    ],
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
+## 获取当前系统任务信息
+
+### 接口地址：/v1/wisdom/app/get/task_user/
+
+### 请求方式：POST
+
+### 请求参数：
+
+* 
+
+### 请求示例:
+
+* 
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": [
+        {
+            "company": "BAT", // 任务人单位
+            "roles__name": "管理员",  // 角色
+            "id": 1, // 用户ID
+            "roles": 7,  // 角色ID
+            "name": "吕品品" // 用户名
         }
     ],
     "retCode": 0,
