@@ -647,7 +647,8 @@
             "startTime": 1647011934,  // 巡河开始时间
             "shipName": "QDF-0019",  // 船的名称
             "user": "仰望星空",  // 任务人员
-            "sLatitude": "31.3169841432"  // 起点纬度
+            "sLatitude": "31.3169841432",  // 起点纬度
+            "isStarted": 0:未开船、1:已开船 ,
             "shipStreamAddress": "https://open.ys7.com/v3/openlive/F10240821_1_1.m3u8?expire=1665537079&id=369774369014853632&t=7f75a52a8c9bbb33ced65da0d52df783c55177b30a2c1f7787fb40f86709f92c&ev=100"  // 船舶的视频流地址
         },
         "endData": { // 结束巡河
@@ -662,6 +663,7 @@
             "endTime": 1647022932,  // 结束时间
             "eLongitude": "116.165032",  // 结束经度
             "realDistance": "7.899"  // 实际运行距离
+            "isStarted": 0:未开船、1:已开船 ,
         },
         "taskData": {  // 巡河基础信息
             "status": 3,  // 巡河状态: 1:待处理 、2:处理中、3:已处理
@@ -676,6 +678,8 @@
             "areaData": "杭州市西湖区",  // 任务名称
             "content": "日常巡河、游人和堤防安全、水质监测。",  // 任务内容
             "cCompany": "西湖管委会"  // 发布单位
+            "isStarted": 0:未开船、1:已开船 ,
+
         },
         "eventList": [  // 预警事件
             {
