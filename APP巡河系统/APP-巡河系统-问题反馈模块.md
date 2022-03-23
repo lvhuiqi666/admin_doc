@@ -174,7 +174,8 @@
                 "status": 2,  // 问题状态 1:待处理、1:处理中、2:已处理
                 "cTs": 1647963269, // 上报时间
                 "reportUser": "吕品品", // 上报人员
-                "reportMobile": "13069634825" // 上报人联系方式
+                "reportMobile": "13069634825", // 上报人联系方式
+                "address": "上报位置", 
             }
         ],
         "links": {
@@ -212,6 +213,7 @@
                 "answer": null,  // 问题描述
                 "proVideoAddress": null,  // 处理上报视频
                 "proImageAddress": null  // 处理上报图片
+                "address": "上报位置", // 上报位置
             }
         ],
         "links": {
@@ -239,6 +241,14 @@
 | reportUserId | INT  | 是       | 上报人ID | 账号登录时获取 |
 
 ### 请求示例:
+
+```bash
+{"reportUserId": 1}
+```
+
+### 响应
+
+#### 200
 
 ```bash
 {
@@ -269,15 +279,56 @@
 }
 ```
 
+## 反馈问题详情接口：
+
+> 如果是待处理状态，点击当前问题，变成处理中。
+
+### 接口地址：/v1/wisdom/app/feedback/detail/
+
+### 请求方式：POST
+
+### 请求参数：
+
+| 参数名 | 类型 | 是否必传 | 命名       | 备注 |
+| ------ | ---- | -------- | ---------- | ---- |
+| fbId   | INT  | 是       | 反馈问题ID |      |
+
+### 请求示例:
+
+```bash
+{
+    "fbId": 2
+}
+```
+
 ### 响应
 
 #### 200
 
 ```bash
 {
+    "data": [
+        {
+            "status": 2, // 1:待处理、2:处理中、3:已处理
+            "user__name": "吕品品", // 上报人
+            "waters_id": 32, // 水域ID
+            "pro_ts": null, // 处理时间
+            "address": "附近",  // 发现位置
+            "process_user__mobile": null, // 处理人联系方式
+            "user__mobile": "13069634825", // 上报人联系方式
+            "content": "非法捕鱼A",  // 问题描述
+            "waters__name": "祥符荡", // 水域名称
+            "answer": null, // 处理事项
+            "user_id": 1, // 上报人ID
+            "process_user_id": null, // 处理人ID
+            "image_address": "http://qingdaofu-bucket.oss-cn-hangzhou.aliyuncs.com/1641364340-front_img.png", // 上报图片
+            "id": 2, // 问题ID
+            "process_user__name": null, // 处理人名
+            "pro_image_address": null // 处理图片
+        }
+    ],
     "retCode": 0,
     "retMsg": "成功 | Success"
 }
 ```
 
-## 
