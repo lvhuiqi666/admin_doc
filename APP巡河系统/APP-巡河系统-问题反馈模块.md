@@ -154,66 +154,34 @@
 
 #### 200
 
-【状态】为待处理、处理中 == 1 、2 的返回数据结构
-
 ```bash
 {
     "data": {
-        "count": 1,
+        "count": 2,
         "list": [
             {
-                "id": 10,  // 反馈问题ID
-                "cTime": "1647963678.409098", // 反馈时间
-                "content": "非法捕鱼I", // 反馈内容
+                "id": 18, // 问题ID
+                "cTime": "1648193976.393878", // 上报时间
+                "content": "1111",  //上报问题内容
                 "watersInfo": {  // 水域信息
-                    "id": 32,
-                    "name": "祥符荡"
+                    "id": 61,
+                    "name": "温瑞塘河-瑞安(早)"
                 },
-                "imageAddress": "http://qingdaofu-bucket.oss-cn-hangzhou.aliyuncs.com/1641364340-front_img.png", // 上报图片
-                "videoAddress": "",  // 上报视频
-                "status": 2,  // 问题状态 1:待处理、1:处理中、2:已处理
-                "cTs": 1647963269, // 上报时间
-                "reportUser": "吕品品", // 上报人员
-                "reportMobile": "13069634825", // 上报人联系方式
-                "address": "上报位置", 
-            }
-        ],
-        "links": {
-            "previous": null,
-            "next": null
-        }
-    },
-    "retCode": 0,
-    "retMsg": "成功 | Success"
-}
-```
-
-【状态】为已处理 == 3返回数据结构
-
-```bash
-{
-    "data": {
-        "count": 1,
-        "list": [
-            {
-                "id": 13,  // 反馈问题ID
-                "cTime": "1647964578.378882", // 上报时间
-                "content": "非法捕鱼J",  // 上报内容
-                "watersInfo": { // 水域信息
-                    "id": 32,
-                    "name": "祥符荡"
-                },
-                "imageAddress": "http://qingdaofu-bucket.oss-cn-hangzhou.aliyuncs.com/1641364340-front_img.png",  // 上报图片
-                "videoAddress": "",  // 上报视频
-                "status": 3,  // 问题状态
-                "cTs": 1647963269,  // 上报时间
-                "proUser": null,  // 处理人
-                "proMobile": null, // 处理人联系方式
-                "proTs": null,  // 处理时间
-                "answer": null,  // 问题描述
-                "proVideoAddress": null,  // 处理上报视频
-                "proImageAddress": null  // 处理上报图片
-                "address": "上报位置", // 上报位置
+                "imageAddress": "http://qingdaofu-bucket.oss-cn-hangzhou.aliyuncs.com/images/164817574479997.png",  // 上报图片
+                "videoAddress": "",  // 上报视频 
+                "status": 2,  // 状态
+                "address": "还好吧",  // 上报地址
+                "cTs": 1648187497,  //上报时间 
+                "proUser": "吕品品",  // 处理人
+                "proMobile": "13069634825", // 处理人手机号
+                "proTs": 1648193946,  // 处理时间
+                "answer": "asf",  // 处理事项
+                "proVideoAddress": "",  // 处理视频
+                "proImageAddress": "http://qingdaofu-bucket.oss-cn-hangzhou.aliyuncs.com/images/1648193967134148.png", // 处理图片
+                "reportUser": "吕品品",  // 上报人
+                "reportMobile": "13069634825", // 上报手机号
+                "userId": 42,  // 上报人ID
+                "processUserId": 1 // 处理人ID
             }
         ],
         "links": {
