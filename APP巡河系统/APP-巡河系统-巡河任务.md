@@ -279,16 +279,17 @@
 
 ### 请求参数：
 
-| 参数名    | 类型   | 是否必传 | 命名                             | 备注      |
-| --------- | ------ | -------- | -------------------------------- | --------- |
-| taskId    | INT    | 是       | 巡河任务ID                       |           |
-| shipId    | INT    | 是       | 船的ID                           |           |
-| startTime | INT    | 是       | 开始巡河时间(秒时间戳)           |           |
-| sLocation | STRING | 是       | 开始位置                         |           |
-| sLng      | STRING | 是       | 开始位置经度                     |           |
-| sLat      | STRING | 是       | 结束位置纬度                     |           |
-| user      | STRING | 是       | 任务人名                         |           |
-| isStarted | INT    | 是       | 0:app保存操作、1:app开始巡河操作 | 默认值为0 |
+| 参数名            | 类型   | 是否必传 | 命名                             | 备注      |
+| ----------------- | ------ | -------- | -------------------------------- | --------- |
+| taskId            | INT    | 是       | 巡河任务ID                       |           |
+| shipId            | INT    | 是       | 船的ID                           |           |
+| startTime         | INT    | 是       | 开始巡河时间(秒时间戳)           |           |
+| sLocation         | STRING | 是       | 开始位置                         |           |
+| sLng              | STRING | 是       | 开始位置经度                     |           |
+| sLat              | STRING | 是       | 结束位置纬度                     |           |
+| user              | STRING | 是       | 任务人名                         |           |
+| isStarted         | INT    | 是       | 0:app保存操作、1:app开始巡河操作 | 默认值为0 |
+| frontImageAddress | STRING | 否       | 开始巡河拍照                     | 外链地址  |
 
 ### 请求示例:
 
@@ -326,15 +327,16 @@
 
 ### 请求参数：
 
-| 参数名    | 类型   | 是否必传 | 命名                   | 备注 |
-| --------- | ------ | -------- | ---------------------- | ---- |
-| taskId    | INT    | 是       | 巡河任务ID             |      |
-| shipId    | INT    | 是       | 船的ID                 |      |
-| endTime   | INT    | 是       | 结束巡河时间(秒时间戳) |      |
-| eLocation | STRING | 是       | 结束位置               |      |
-| eLng      | STRING | 是       | 结束位置经度           |      |
-| eLat      | STRING | 是       | 结束位置纬度           |      |
-| weight    | STRING | 否       | 垃圾重量               |      |
+| 参数名            | 类型   | 是否必传 | 命名                   | 备注     |
+| ----------------- | ------ | -------- | ---------------------- | -------- |
+| taskId            | INT    | 是       | 巡河任务ID             |          |
+| shipId            | INT    | 是       | 船的ID                 |          |
+| endTime           | INT    | 是       | 结束巡河时间(秒时间戳) |          |
+| eLocation         | STRING | 是       | 结束位置               |          |
+| eLng              | STRING | 是       | 结束位置经度           |          |
+| eLat              | STRING | 是       | 结束位置纬度           |          |
+| weight            | STRING | 否       | 垃圾重量               |          |
+| afterImageAddress | STRING | 否       | 结束巡河拍照           | 外链地址 |
 
 ### 请求示例:
 
