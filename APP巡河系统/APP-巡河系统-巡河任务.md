@@ -61,6 +61,70 @@
 }
 ```
 
+## 更新巡河任务：
+
+### 接口地址：/v1/wisdom/app/update/task/
+
+### 请求方式：POST
+
+### 请求参数：
+
+| 参数名     | 类型   | 是否必传 | 命名         | 备注 |
+| ---------- | ------ | -------- | ------------ | ---- |
+| taskId     | INT    | 是       | 巡河任务ID   |      |
+| name       | STRING | 是       | 任务名称     |      |
+| company    | STRING | 是       | 发布单位     |      |
+| watersId   | INT    | 是       | 水域的ID     |      |
+| cUser      | STRING | 是       | 发布人       |      |
+| areaData   | STRING | 是       | 所属区县     |      |
+| patrolType | INT    | 是       | 巡河方式     |      |
+| user       | STRING | 是       | 任务人       |      |
+| distance   | STRING | 否       | 巡河距离     |      |
+| sLocation  | STRING | 否       | 起点位置     |      |
+| eLocation  | STRING | 否       | 终点位置     |      |
+| sLng       | STRING | 否       | 起点经度坐标 |      |
+| sLat       | STRING | 否       | 起点纬度坐标 |      |
+| eLng       | STRING | 否       | 终点经度坐标 |      |
+| eLat       | STRING | 否       | 终点纬度坐标 |      |
+| content    | STRING | 否       | 任务内容     |      |
+
+### 请求示例:
+
+```bash
+{
+    "taskId": 1,
+    "name": "西湖巡河",
+    "company": "西湖管委会",
+    "cUser": "吕品品",
+    "areaData": "杭州市西湖区",
+    "patrolType": 1,
+    "user": "仰望星空",
+    "distance": "2.2",
+    "sLocation": "云水光中",
+    "eLocation": "慕才亭",
+    "sLng": "120.640957927",
+    "sLat": "31.3169841432",
+    "eLng": "120.641169659",
+    "eLat": "31.3156987507",
+    "content": "日常巡河、游人和堤防安全、水质监测。",
+    "watersId": 22
+}
+```
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": {
+        "id": 1  // 巡河任务ID
+    },
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
 ## 新建巡河任务-船运行轨迹：
 
 > 注意：先创建发布巡河任务, 拿到巡河任务的ID, 才可以进行给这个任务创建船的轨迹点
