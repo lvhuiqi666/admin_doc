@@ -157,3 +157,141 @@
 }
 ```
 
+## 预警事件-月筛选：
+
+### 接口地址：/v1/wisdom/app/alert/month/list/?watersId=15&year=2022&month=4
+
+### 请求方式：GET
+
+### 请求参数：
+
+| 参数名   | 类型 | 是否必传 | 命名   | 备注 |
+| -------- | ---- | -------- | ------ | ---- |
+| year     | INT  | 是       | 年     |      |
+| month    | INT  |          |        |      |
+| watersId | INT  | 是       | 水域ID |      |
+
+### 请求示例:
+
+```bash
+?watersId=15&year=2022&month=4
+```
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": [
+        {
+            "sum": 1, // 总数
+            "aiS_list": [
+                {
+                    "count": 1,  // 类型总数
+                    "ai_s": 1,
+                    "ai_s__name": "生活垃圾"
+                }
+            ],
+            "sTime": "2022-04-03"  // 月份日期
+        }
+    ],
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
+## 预警事件详情接口：
+
+> 当前接口，在预警事件、月筛选、年筛设计图中，下面的筛选列表页中使用，因为年筛选与日筛选、月筛选的表示方式不同。
+
+### 接口地址：/v1/wisdom/app/alert/month/detail/?watersId=15&cTime=2022-04
+
+### 请求方式：GET
+
+### 请求参数：
+
+| 参数名   | 类型   | 是否必传 | 命名        | 备注    |
+| -------- | ------ | -------- | ----------- | ------- |
+| cTime    | STRING | 是       | 年-月字符串 | YYYY-MM |
+| watersId | INT    | 是       | 水域ID      |         |
+
+### 请求示例:
+
+```bash
+?watersId=15&year=2022&month=4
+```
+
+### 响应
+
+#### 200
+
+```bash
+// 具体看详情
+{
+    "data": {
+        "count": 88,
+        "list": [
+            {
+                "id": 89,
+                "address": "xxxx",
+                "lng": "1231",
+                "lat": "123",
+                "isReported": true,
+                "sTime": "1628179200.000000",
+                "eTime": "1628179200.000000",
+                "provinceInfo": {
+                    "id": 1,
+                    "name": "浙江省"
+                },
+                "cityInfo": {
+                    "id": 1,
+                    "name": "杭州市"
+                },
+                "areaInfo": {
+                    "id": 1,
+                    "name": "萧山区"
+                },
+                "townInfo": {},
+                "villageInfo": {},
+                "shipInfo": {
+                    "userName": "吕品品123",
+                    "userId": 1,
+                    "id": 2,
+                    "userMobile": "13069634826",
+                    "number": "0002"
+                },
+                "watersInfo": {
+                    "id": 2,
+                    "name": "西湖"
+                },
+                "userInfo": {
+                    "mobile": "13069634826",
+                    "id": 1,
+                    "name": "吕品品123"
+                },
+                "aiP_info": {
+                    "id": 1,
+                    "name": "水上识别"
+                },
+                "aiS_info": {
+                    "text": "河长办、环保局、城管局",
+                    "id": 1,
+                    "name": "生活垃圾"
+                },
+                "aiT_info": {
+                    "id": 1,
+                    "name": "塑料袋"
+                }
+            }
+        ],
+        "links": {
+            "previous": null,
+            "next": "http://127.0.0.1:8000/v1/admin/alarm/list/?page=2"
+        }
+    },
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
