@@ -143,3 +143,45 @@
 }
 ```
 
+## 获取-用户身份认证：
+
+### 接口地址：/v1/wisdom/app/get/user_info/
+
+### 请求方式：POST
+
+### 请求参数：
+
+| 参数名 | 类型 | 是否必传 | 命名   | 备注 |
+| ------ | ---- | -------- | ------ | ---- |
+| userId | INT  | 是       | 用户ID |      |
+
+### 请求示例:
+
+```bash
+{
+    "userId": 1
+}
+```
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": [
+        {
+            "identity_front": "http://qingdaofu-bucket.oss-cn-hangzhou.aliyuncs.com/images/165206020029289.png",  // 身份证前
+            "name": "吕慧奇",  // 姓名
+            "mobile": "13069634825",  // 手机号 
+            "company": "翌明",  // 公司
+            "identity_back": "http://qingdaofu-bucket.oss-cn-hangzhou.aliyuncs.com/images/165206023977170.png", // 身份证后
+            "avatar_url": null,  // 头像
+            "id": 1  // 用户ID
+        }
+    ],
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
