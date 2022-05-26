@@ -202,3 +202,39 @@
 }
 ```
 
+## 获取用户权限：
+
+### 接口地址：/v1/wisdom/app/check/user_auth/
+
+### 请求方式：POST
+
+### 请求参数：
+
+| 参数名 | 类型 | 是否必传 | 命名   | 备注 |
+| ------ | ---- | -------- | ------ | ---- |
+| userId | INT  | 是       | 用户ID |      |
+
+### 请求示例:
+
+```bash
+{"userId": 1}
+```
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": [
+        {
+            "is_enabled": false,    // false 表示没有被禁用、 true 表示已经被禁用
+            "is_authed": true, // true 表示已经认证、false 表示未认证
+            "id": 1 // 用户ID
+        }
+    ],
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
