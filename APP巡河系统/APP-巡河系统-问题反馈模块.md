@@ -17,6 +17,8 @@
 | reportUserId | INT    | 是       | 上报人ID | 姓名、手机从登录成功带过来自动填写 |
 | imageAddress | STRING | 是       | 上报图片 |                                    |
 | videoAddress | STRING | 否       | 上报视频 |                                    |
+| lng          | STRING | 是       | 经度     |                                    |
+| lat          | STRING | 是       | 纬度     |                                    |
 
 ### 请求示例:
 
@@ -179,7 +181,9 @@
                 "reportUser": "吕品品",  // 上报人
                 "reportMobile": "13069634825", // 上报手机号
                 "userId": 42,  // 上报人ID
-                "processUserId": 1 // 处理人ID
+                "processUserId": 1, // 处理人ID
+                "lat": "111.11", // 纬度
+                "lng": "222.22" // 经度
             }
         ],
         "links": {
@@ -291,6 +295,8 @@
             "id": 2, // 问题ID
             "process_user__name": null, // 处理人名
             "pro_image_address": null // 处理图片
+            "lat": "111.11", // 纬度
+            "lng": "222.22" // 经度
         }
     ],
     "retCode": 0,
