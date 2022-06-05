@@ -238,3 +238,39 @@
 }
 ```
 
+## 人脸识别接口：
+
+### 接口地址：/app/verify/face/
+
+### 请求方式：POST
+
+### 请求参数：
+
+| 参数名   | 类型   | 是否必传 | 命名             | 备注 |
+| -------- | ------ | -------- | ---------------- | ---- |
+| userId   | INT    | 是       | 用户ID           |      |
+| imageUrl | STRING | 是       | 用户图片外联地址 |      |
+
+### 请求示例:
+
+```bash
+{
+    "userId": 22,
+    "imageUrl": "https://qingdaofu-bucket.oss-cn-hangzhou.aliyuncs.com/1590566581-object.png"
+}
+```
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": {
+        "result": false  // 认证未通过、 true 表示认证通过
+    },
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
