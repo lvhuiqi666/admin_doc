@@ -143,16 +143,17 @@
 
 ### 请求参数：
 
-| 参数名   | 类型   | 是否必传 | 命名     | 备注     |
-| -------- | ------ | -------- | -------- | -------- |
-| watersId | INT    | 是       | 水域ID   |          |
-| sTime    | STRING | 是       | 开始时间 | YY-MM-DD |
-| eTime    | STRING | 是       | 结束时间 | YY-MM-DD |
+| 参数名   | 类型   | 是否必传 | 命名       | 备注     |
+| -------- | ------ | -------- | ---------- | -------- |
+| watersId | INT    | 是       | 水域ID     |          |
+| sTime    | STRING | 是       | 开始时间   | YY-MM-DD |
+| eTime    | STRING | 是       | 结束时间   | YY-MM-DD |
+| pointId  | INT    | 是       | 定点点位ID |          |
 
 ### 请求示例：
 
 ```bash
-?watersId=22&sTime=2021-06-09&eTime=2021-06-11
+?sTime=2022-06-07&eTime=2022-06-09&watersId=68&pointId=82
 ```
 
 ### 响应
