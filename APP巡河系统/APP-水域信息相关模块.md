@@ -499,6 +499,74 @@
 }
 ```
 
+## 报表-水质检测平均值：
+
+### 接口地址：/v1/wisdom/app/water_quality/avg_data/
+
+### 请求方式：POST
+
+### 请求参数：
+
+| 参数名   | 类型   | 是否必传 | 命名   | 备注                           |
+| -------- | ------ | -------- | ------ | ------------------------------ |
+| watersId | INT    | 是       | 水域ID |                                |
+| dateList | LIST   | 是       | 日期   | 客户端判断周后端接受参数为日期 |
+| category | STRING | 是       | 类别   |                                |
+
+### 请求示例：
+
+```bash
+{
+    "dateList": [
+        "2022-06-22",
+        "2022-06-23",
+        "2022-06-24"
+    ],
+    "waterId": 67,
+    "category": "tn"
+}
+```
+
+> category: 详情：
+> ph ph值
+> nh3 nh3
+> nh4 nh4
+> k  钾离子
+> cod 化学需氧量
+> turbidity 浊度
+> diss_oxy 溶解氧
+> oxy_saturation 溶解氧饱和度
+> chlorophy 绿叶素
+> tn 总氮
+> tp 总磷
+> conduct 电阻率
+> temp 温度
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": [
+        {
+            "tn": "2.4668",  // 指标值
+            "sTime": "2022-06-22" // 日期
+        },
+        {
+            "tn": "12",
+            "sTime": "2022-06-23"
+        },
+        {
+            "tn": null,
+            "sTime": "2022-06-24"
+        }
+    ],
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
 ## 报表-年报表下载接口：
 
 > 返回文件的二进制
