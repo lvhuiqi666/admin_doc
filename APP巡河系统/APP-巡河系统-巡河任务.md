@@ -1046,3 +1046,50 @@
 }
 ```
 
+## 获取所有背景音乐列表页
+
+### 接口地址：/wisdom/app/voice_play/list/
+
+### 请求方式：GET
+
+### 请求参数：
+
+| 参数名  | 类型   | 是否必传 | 命名     | 备注 |
+| ------- | ------ | -------- | -------- | ---- |
+| detect  | INT    | 否       | 播报类型 | 筛选 |
+| event   | INT    | 否       | 事件类型 | 筛选 |
+| content | STRING | 否       | 内容     | 筛选 |
+
+### 请求示例:
+
+* 
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": [
+        {
+            "id": 28,
+            "cTime": "1637653772.973381",
+            "detect": 5,
+            "event": "Can you speak English?",
+            "content": "I am a language genius, I am proficient in Chinese and English.",
+            "name": "吕品品"
+        },
+        {
+            "id": 27,
+            "cTime": "1637653758.882378",
+            "detect": 5,
+            "event": "how old are you?",
+            "content": "I am six years old.",
+            "name": "吕品品"
+        }
+    ],
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
