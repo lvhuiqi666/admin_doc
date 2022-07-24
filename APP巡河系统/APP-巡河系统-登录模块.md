@@ -51,6 +51,23 @@
                 "name": "平江河项目",  // 项目名称
                 "waters_id": 23  // 水域ID
             },
+        "auth": [  // 登录权限控制板块
+            {
+                "auth_type": 2,  // 类型: 1:大屏幕、2:app 、 3:后台、 4:驾驶舱
+                "is_enabled": false, // false 表示启用、ture 表示禁用
+                "name": "项目管理",  // 名称
+                "project_desc": [ // 项目管理中, 会有配置的详情信息, 但是 接口已经返回， 此字段可以忽略
+                    {
+                        "num": "JS-SZ-YYJ-ZJJX-20210508",
+                        "id": 33,
+                        "name": "平江河项目"
+                    }
+                    ]
+                "roles_id": 7,  // 角色ID
+                "func_id": "XMGL",  // 函数命名
+                "id": 464, // 权限角色ID
+                "desc": null  // 角色详情
+            }]
      ]
     },
     "retCode": 0,
