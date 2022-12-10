@@ -864,6 +864,39 @@
 }
 ```
 
+## 上传预警照片接口：
+
+### 接口地址：/wisdom/app/upload/alarm_image/
+
+### 请求方式：POST
+
+### 请求参数：
+
+| 参数名       | 类型   | 是否必传 | 命名           | 备注 |
+| ------------ | ------ | -------- | -------------- | ---- |
+| alarmId      | INT    | 是       | 预警ID         |      |
+| imageAddress | STRING | 是       | 图片的外链地址 |      |
+
+### 请求示例:
+
+```bash
+{
+    "alarmId": 102,
+    "imageAddress": "123"
+}
+```
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
 ## 事件(撤回操作)：
 
 ### 接口地址：/wisdom/app/event/unreported/
