@@ -49,7 +49,14 @@
                 "num": "JS-SZ-YYJ-ZJJX-20210508",  // 项目名称
                 "id": 33, // 项目ID
                 "name": "平江河项目",  // 项目名称
-                "waters_id": 23  // 水域ID
+                "waters_id": 23，  // 水域ID(废弃)
+                "waters_info": [  // 水域信息(新字段)
+                    {
+                        "waters_number": "TZ-001", // 水域编号
+                        "waters_name": "台州河段",   // 水域名称
+                        "waters_id": 57 // 水域ID
+                    }
+                ],
             },
         "auth": [  // 登录权限控制板块
             {
