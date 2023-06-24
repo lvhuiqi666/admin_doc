@@ -1165,3 +1165,60 @@
 }
 ```
 
+## 船舶运行工况接口
+
+### 接口地址：/wisdom/app/ship_running/status/
+
+### 请求方式：GET
+
+### 请求参数：
+
+| 参数名 | 类型 | 是否必传 | 命名   | 备注 |
+| ------ | ---- | -------- | ------ | ---- |
+| shipId | INT  | 是       | 船舶ID |      |
+
+### 请求示例:
+
+```bash
+?shipId=76
+```
+
+### 响应
+
+#### 200
+
+```bash
+{
+    "data": {
+        "shipRunningData": { // 船舶运行工况
+            "duration": "14970",  // 运行时间 秒 前端转换
+            "distance": "6.328", // 运行距离 km
+            "id": 6370,  
+            "weight": "0"  // 垃圾重量
+        },
+        "shipAlarmCount": 0,  // 预警数量
+        "shipData": {
+            "ship__zipStreamAddress": null, // 压缩流
+            "course": "-164.96131897", // 航向
+            "electricity": "77.5",  // 电量
+            "signal": "0",  // 5g信号、1:有、0:无
+            "ship__streamAddress": "https://open.ys7.com/v3/openlive/F10240750_1_1.m3u8?expire=1691742106&id=479686216162226176&t=a767f597f6bf8b1cdb8699f07743e26e2d586ba88dd77aafd85e8a399febfcae&ev=100", // 流地址
+            "shipId": 76, // 船舶ID
+            "ship__watersId": 79,  // 船舶水域ID
+            "ship__waters__name": "外塘河",  // 水域名称
+            "noSv": "28", // 卫星数量
+            "driveType": 1,  // 驾驶模式: 1：自动驾驶、2:人工驾驶
+            "lng": "120.6131516",  // 经度
+            "ship__number": "0031",  // 船舶编号
+            "lat": "31.3302933",  // 纬度 
+            "ship__status": 1, // 船舶状态 0:正常、1:离线、2:故障、3:预警
+            "ship__name": "苏市水保5003",  // 船舶名称
+            "speed": "0.296953054812",  // 船舶速度
+            "id": 28
+        }
+    },
+    "retCode": 0,
+    "retMsg": "成功 | Success"
+}
+```
+
